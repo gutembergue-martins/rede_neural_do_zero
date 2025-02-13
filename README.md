@@ -33,60 +33,73 @@
 
  > ℹ️ **NOTE:** Este repositório foi desenvolvido durante o BootCamp BairesDev - Machine Learning Practitioner em parceria com a [DIO](https://dio.me)
 
-Este projeto tem como objetivo aplicar o conhecimento difundido nas aulas teóricas de modo sendimentar através da prática a implementação de uma base de dados supervisionadas para treinamento da rede YOLO, utilizando a plataforma Labelme para treinamento e o Dataset da COCO.
+Este projeto tem como objetivo aplicar o conhecimento difundido nas aulas teóricas para realizar a implementação de uma rede neural partindo do zero, com o propósito que esta seja capaz de efetuar detecção e classificação de rosto de pessoas em imagens.
 
 
 ## 💻 Tecnologias utilizadas no projeto
 
-- [ChatGPT](https://chat.openai.com/) 
-- [MidJourney](https://www.midjourney.com/app/)
+- [ChatGPT](https://chat.openai.com/)
+- [DeepSeek](https://chat.deepseek.com/)
 - [Google Colab](https://colab.google/)
-- [COCO](https://cocodataset.org/#download)
+- [Google Imagens](https://images.google.com/?hl=pt-br)
 - [LabelMe](http://labelme.csail.mit.edu/Release3.0/)
 
 
 ## ✨ Como foi feito ?
 
 - O Google Colab foi utilizado para executar os blocos de códigos
-- O chatgpt foi utilizado para gerar insights sobre cálculo de métrica
-- Midjourney para gerar imagens
-- O COCO foi utilizado para prover o Dataset de treinamento
+- O chatgpt foi utilizado para gerar insights e aprofundamento do conhecimento
+- O DeepSeek foi utilizado para a depuração e refatoração do código
+- O Google Imagens foi utilizado para baixar imagens para o projeto
 - O LabelMe teve como propósito treinamento na aplicação do rótulo nas imagens
 
 ## 🛠️ Instruções de execução
 
-As instruções para a realização deste projeto foram difundidas no módulo Fundamentos e Práticas de Deep Learning do referido Bootcamp da DIO, onde além da explanação teórica foi disponibilizado orientações nos seguintes:
-- Para quem estiver utilizar o transfer learning no COLAB
-(https://colab.research.google.com/github/ultralytics/yolov3/blob/master/tutorial.ipynb)
-- Para instruções para executar e instalar o software para rotular as imagens<br>
-(http://labelme.csail.mit.edu/Release3.0/)
+As instruções para a realização deste projeto foram difundidas no módulo de Frameworks de Deep Learning do referido Bootcamp da DIO, onde além da explanação teórica foi disponibilizado orientações para a execução do projeto nos seguintes sítios:
+- Detecção Facial
+[(https://colab.research.google.com/github/ultralytics/yolov3/blob/master/tutorial.ipynb)](https://colab.research.google.com/drive/1QnC7lV7oVFk5OZCm75fqbLAfD9qBy9bw?usp=sharing )
+- Detecção e classificação de objetos<br>
+[(http://labelme.csail.mit.edu/Release3.0/)](https://colab.research.google.com/drive/1xdjyBiY75MAVRSjgmiqI7pbRLn58VrbE?usp=sharing )
 
 ## Descrição
 
-### Treinamento da Rede YOLO
+O reconhecimento facial é uma tecnologia avançada baseada em visão computacional e inteligência artificial que tem se tornado essencial em diversos setores da sociedade na atualidade.
 
-A criação de uma base de dados para treinamento da rede YOLO (You Only Look Once) envolve três etapas principais: coleta e preparação das imagens, anotação (rotulagem) dos objetos e treinamento da rede neural.
+### Importância e Aplicabilidade
 
-1️⃣ **Criação da Base de Dados**
-As imagens podem ser coletadas de bancos de dados públicos ou capturadas manualmente.
-Devem ser organizadas em pastas separadas para treinamento (train) e validação (val), seguindo a estrutura exigida pelo YOLO.
+- **Segurança e Vigilância:** Utilizado em aeroportos, prédios governamentais e empresas para controle de acesso e monitoramento.
+- **Autenticação e Privacidade:** Aplicado em dispositivos móveis e sistemas bancários para desbloqueio de telas e pagamentos seguros.
+- **Saúde e Diagnóstico:** Usado para identificar sintomas de doenças raras e monitorar expressões faciais em tratamentos médicos.
+- **Marketing e Experiência do Usuário:** Empresas utilizam a tecnologia para personalizar anúncios e analisar reações dos consumidores.
+- **Setor Público e Investigações:** Auxilia na identificação de criminosos e na busca por pessoas desaparecidas.
 
-2️⃣ **Anotação das Imagens com LabelMe**
-O LabelMe é uma ferramenta de código aberto usada para criar rótulos em imagens no formato JSON. 
-O processo de rotulagem inclui:
-Abrir a imagem no LabelMe.
-Criar caixas delimitadoras (bounding boxes) ou polígonos ao redor dos objetos de interesse.
-Atribuir classes aos objetos de acordo com o modelo a ser treinado.
+### Passos para Desenvolver um Sistema de Detecção Facial
 
-3️⃣ **Treinamento da Rede YOLO**
-Após criar a base de dados, o treinamento do YOLO pode ser realizado no Google Colab ou localmente, utilizando a biblioteca Ultralytics YOLOv5. 
-O processo inclui:
-Clonar o repositório YOLOv5 e instalar as dependências.
-Criar o arquivo data.yaml para especificar os caminhos do dataset e número de classes.
+**1. Escolher uma Biblioteca ou Framework**<br>
+- OpenCV, Dlib, TensorFlow ou Mediapipe.<br>
+    
+**2. Carregar a Imagem ou Vídeo**<br>
+- Utilizar OpenCV (cv2.imread()) para carregar imagens.<br>
+    
+**3. Pré-processamento da Imagem**<br>
+- Converter para tons de cinza para otimizar a detecção.<br>
+    
+**4. Usar um Classificador Pré-Treinado**<br>
+- Modelos como Haarcascade ou DNN para detectar rostos.<br>
+    
+**5. Desenhar as Caixas Delimitadoras**<br>
+- Criar retângulos ao redor dos rostos detectados (cv2.rectangle()).<br>
+    
+**6. Treinar um Modelo para Classificação Facial (Opcional)**<br>
+- Utilizar redes neurais para classificar os rostos detectados.<br>
+
+**7. Exibir e Testar o Sistema**<br>
+- Utilizar cv2.imshow() para visualizar a saída.<br>
+
 
 ### Conclusão
 
-🚀 O uso do LabelMe é essencial para a criação de bases de dados personalizadas, permitindo a anotação precisa de objetos em imagens. Com as anotações convertidas para o formato YOLO, é possível treinar a rede neural para detectar padrões específicos. O treinamento do modelo no YOLOv5 envolve configurar corretamente os diretórios, definir o arquivo data.yaml e ajustar hiperparâmetros para otimizar o desempenho. Após o treinamento, a validação dos resultados garante que o modelo esteja adequado para aplicações reais. Esse processo é fundamental para desenvolver sistemas de visão computacional eficientes, aplicáveis a diversas áreas como segurança, indústria e pesquisa.
+🚀 Para iniciantes em Machine Learning e Visão Computacional, é recomendável começar com conceitos básicos de Python e OpenCV, explorando bibliotecas como Mediapipe e TensorFlow. Praticar projetos simples, como detecção e reconhecimento de rostos, é um ótimo primeiro passo antes de avançar para modelos mais sofisticados, como redes neurais convolucionais (CNNs). Além disso, utilizar datasets públicos e experimentar modelos pré-treinados pode acelerar o aprendizado.
 
 ## 👨‍💻 Novato
 
