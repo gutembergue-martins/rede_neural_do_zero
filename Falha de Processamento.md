@@ -11,7 +11,7 @@ Isso indica que o modelo está enviesado para prever "leonard", o que pode ser c
 - As probabilidades para cada classe são:
 <p>
 <img>
-src="image/img_programmer_github.png"
+src="imagem/fig1 - falha de processamento.png"
     width="300"
 </img>
 </p>
