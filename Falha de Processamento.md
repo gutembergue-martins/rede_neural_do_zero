@@ -9,11 +9,11 @@ Isso indica que o modelo está enviesado para prever "leonard", o que pode ser c
 
 **1. Previsões do modelo:**
 - As probabilidades para cada classe são:
-<p>
-<img>
+<p align="center">
+<img
 src="imagem/fig1 - falha de processamento.png"
     width="300"
-</img>
+/>
 </p>
 
 - Apesar de as probabilidades estarem relativamente próximas, o modelo sempre escolhe a classe 1 ("leonard") porque ela tem a maior probabilidade.
