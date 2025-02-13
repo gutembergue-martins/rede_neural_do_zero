@@ -48,7 +48,8 @@ src="imagem/fig1 - falha de processamento.png"
 
 ### Conclusão
 <p>
-Este projeto está apresentando <b>erro de detecção e classificação</b>, não atingindo em sua completude a tarefa solicitada pelo professor. Apesar de direcionar esforço e energia para resolver os problemas apresentados na execução do código, não consegui resolver o problema.
+Este projeto está apresentando <b>erro de detecção e classificação</b>, não atingindo em sua completude a tarefa solicitada pelo professor. Apesar de direcionar esforço e energia para resolver os problemas apresentados na execução do código, não consegui resolver o problema.<br>
+   <p align="center"> <b>O código deste projeto foi depurado pelo DeepSeek</b></p>
 </p>
 
 
