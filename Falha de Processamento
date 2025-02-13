@@ -1,0 +1,33 @@
+### Falha de Processamento do Código
+
+<p align="justify">
+A que você compartilhou mostra que o modelo está sempre prevendo a classe "leonard" (índice 1), mesmo quando as probabilidades para as outras classes são relativamente próximas.
+Isso indica que o modelo está enviesado para prever "leonard", o que pode ser causado por problemas no treinamento, desequilíbrio nos dados ou configuração incorreta do modelo.
+</p>
+
+## Análise da saída:
+
+**1. Previsões do modelo:**
+  - As probabilidades para cada classe são:
+<p><img>
+src="image/img_programmer_github.png"
+    width="300"
+</img></p>
+  - Apesar de as probabilidades estarem relativamente próximas, o modelo sempre escolhe a classe 1 ("leonard") porque ela tem a maior probabilidade.
+
+**2. Problema identificado:**
+
+- O modelo não está confiante em suas previsões, já que as probabilidades estão muito próximas.
+
+- O enviesamento para "leonard" pode ser causado por:
+
+    - Desequilíbrio no conjunto de treinamento (muitas imagens de "leonard").
+
+    - Problemas na função de perda ou no treinamento do modelo.
+
+    - Configuração incorreta da camada de saída.
+
+
+
+
+  - Apesar de as probabilidades estarem relativamente próximas, o modelo sempre escolhe a classe 1 ("leonard") porque ela tem a maior probabilidade.
